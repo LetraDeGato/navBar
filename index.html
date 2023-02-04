@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,9 +13,13 @@
         <div class="mobile">
             <div class="header">
                 <div class="logo"> logo </div>
-                <div class="more"><button> more </button></div>
+                <div class="more">
+                    <button id="bMore"> <span class="material-symbols-outlined">
+                    menu</span> 
+                    </button>
+                </div>
             </div>
-            <div class="links">
+            <div id="links" class="links collapse">
                 <a href="#">Services</a>
                 <a href="#">About</a>
                 <a href="#">Contact</a>
@@ -40,7 +45,7 @@
             </div>
 
             <div class="secondary mini">
-                <a href="#">More</a>
+                <a href="#" class="more">More</a>
                 <div class="submenu">
                     <a href="#">Search</a>
                     <a href="#">Sing up</a>
@@ -49,5 +54,15 @@
             </div>
         </div>
     </nav>
+
+    <script>
+        const bMore = document.querySelector('#bMore');
+        const links = document.querySelector("#links");
+
+        bMore.addEventListener('click', e ⇒ {
+            links.classList.toggle('collapse')
+        })
+        
+    </script>
 </body>
 </html>
